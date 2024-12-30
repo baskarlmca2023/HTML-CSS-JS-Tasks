@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Quote Generator</title>
+</head>
+
+<body>
+    <button onclick="showQuote()">Show Quote</button>
+    <p id="quote"></p>
+    <script>
+        const quotes = ['Keep going!', 'Stay positive!', 'Believe in yourself!'];
+        function showQuote() {
+            const randomIndex = Math.floor(Math.random() * quotes.length);
+            document.getElementById('quote').textContent = quotes[randomIndex];
+        }
+    </script>
+
+</body>
+
+</html>

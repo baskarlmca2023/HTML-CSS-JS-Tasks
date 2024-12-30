@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Countdown Timer</title>
+</head>
+
+<body>
+    <input id="seconds" type="number" placeholder="Seconds">
+    <button onclick="startCountdown()">Start</button>
+    <p id="timer"></p>
+    <script>
+        function startCountdown() {
+            let time = parseInt(document.getElementById('seconds').value);
+            const interval = setInterval(() => {
+                document.getElementById('timer').textContent = `Time: ${time}s`;
+                if (time-- <= 0) clearInterval(interval);
+            }, 1000);
+        }
+    </script>
+
+</body>
+
+</html>

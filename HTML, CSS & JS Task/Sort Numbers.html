@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sort Numbers</title>
+</head>
+
+<body>
+    <input id="numbers" placeholder="Enter numbers separated by commas">
+    <button onclick="sortNumbers()">Sort</button>
+    <p id="sorted"></p>
+    <script>
+        function sortNumbers() {
+            const nums = document.getElementById('numbers').value.split(',').map(Number);
+            document.getElementById('sorted').textContent = nums.sort((a, b) => a - b).join(', ');
+        }
+    </script>
+
+</body>
+
+</html>

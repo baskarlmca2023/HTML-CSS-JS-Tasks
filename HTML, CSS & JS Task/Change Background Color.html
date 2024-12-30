@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Change Background</title>
+</head>
+<body>
+  <select id="colorSelect" onchange="changeBackground()">
+    <option value="white">White</option>
+    <option value="lightblue">Light Blue</option>
+    <option value="lightgreen">Light Green</option>
+    <option value="yellow">Yellow</option>
+  </select>
+  <script>
+    function changeBackground() {
+      const color = document.getElementById('colorSelect').value;
+      document.body.style.backgroundColor = color;
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interactive Counter</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin-top: 100px;
+    }
+    h1 {
+      color: #333;
+    }
+    .counter {
+      font-size: 48px;
+      font-weight: bold;
+      margin: 20px 0;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      margin: 5px;
+      cursor: pointer;
+      border: none;
+      border-radius: 5px;
+    }
+    .increment {
+      background-color: #4CAF50;
+      color: white;
+    }
+    .decrement {
+      background-color: #f44336;
+      color: white;
+    }
+    .reset {
+      background-color: #008CBA;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <h1>Interactive Counter</h1>
+  <div class="counter" id="counter">0</div>
+  <button class="increment" onclick="increment()">Increment</button>
+  <button class="decrement" onclick="decrement()">Decrement</button>
+  <button class="reset" onclick="reset()">Reset</button>
+
+  <script>
+    let count = 0;
+
+    function increment() {
+      count++;
+      updateCounter();
+    }
+
+    function decrement() {
+      count--;
+      updateCounter();
+    }
+
+    function reset() {
+      count = 0;
+      updateCounter();
+    }
+
+    function updateCounter() {
+      document.getElementById('counter').innerText = count;
+    }
+  </script>
+</body>
+</html>
